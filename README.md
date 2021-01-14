@@ -34,6 +34,13 @@ INFO: 2 processes: 2 internal.
 FAILED: Build did NOT complete successfully
 ```
 
+----
+
+### Repro Details
+
+🌎 **Platform:** darwin19.0 (Mac OSX)
+**`bazel info release`:** `release 3.7.2`
+
 ### Investigation 
 
 I'm pretty sure this bug occurs because a file within the `pyspark` package contains an `=` character which is breaking some params file parsing
